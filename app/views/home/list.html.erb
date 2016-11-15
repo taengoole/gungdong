@@ -1,0 +1,36 @@
+<div class="container" style="margin-top:30px">
+  <form action="/home/write" method="POST">
+    <div class="form-group">
+      <label for="exampleInputEmail1">업체명</label>
+      <input type="title" class="form-control" id="title" name="title" placeholder="업체명">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">대표메뉴</label>
+      <input type="content" class="form-control" id="content" name="content" placeholder="대표메뉴">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">간단설명</label>
+      <input type="content" class="form-control" id="content" name="explainshort" placeholder="간단설명">
+    </div>
+    <button type="submit" class="btn btn-default">입력</button>
+  </form>
+ 
+    <br>
+    <a href="/home/index">Home</a>
+    <br><br>
+    
+    <% @posts.each do |p| %>
+    <div class="margin-top:30px">
+     <p><%= p.title %></br>
+        <img src = "<%= image_path p.title.to_s + ".jpg" %>" height="150" width="150"><br>
+        대표메뉴 : <%= p.content%><br>
+        간단설명 : <%= p.explainshort %><br>
+        등록시간 : <%= p.created_at %>
+       <a href="/update_view/<%= p.id %>">[수정]</a>
+       <a href="/destroy/<%= p.id %>">[삭제]</a>
+     </p>
+     <hr>
+    <% end %>
+    </div>
+
+</div>
