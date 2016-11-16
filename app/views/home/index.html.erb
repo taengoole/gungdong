@@ -38,7 +38,7 @@
 				<% @main_random.each do |m| %>
 					<h3 class="header center orange-text"><b><%= m.title %></b></h3>
 					<p>대표메뉴 : <%= m.content %><br>
-					특    징 : <%= m.explainshort %><br></p>
+					 <%= m.explainshort %><br></p>
 					<img src = "<%= image_path m.title.to_s + ".jpg" %>" height="200" width="270">
 
 			<% end %>
@@ -55,19 +55,19 @@
       <div class="row">
         <div class="col l6 s12">
           <h5 class="white-text">Random Gungdong</h5>
-          <p class="grey-text text-lighten-4"> 쪽문 넘어서까지 "아.. 무ㅓ머ㅓㄱㅈㅣㅣㅣ..." 세상에서 가장 심각한 고민을 매일하고 있는 우리 학우들의 고민을 덜고자
+          <p class="grey-text text-lighten-4">매일 쪽문 넘어서까지 "아.. 무ㅓ머ㅓㄱㅈㅣㅣㅣ..."<br> 세상에서 가장 심각한 고민을 하고 있는 우리 학우들의 고민을 덜고자
 
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">주의사항</h5>
           <ul>
-            <li><a class="white-text">위 서비스는 지극히 주관적인 개인의 입맛이 담겨있습니다.</a></li>
+            <li><p class="white-text">위 서비스는 지극히 주관적인 개인의 입맛이 담겨있습니다.</p></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">제보하기</h5>
           <ul>
-            <li><a class="white-text" href="#!">taengoole@gmail.com</a></li>
+            <li><p class="white-text">taengoole@gmail.com</p></li>
           </ul>
         </div>
       </div>

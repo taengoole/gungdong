@@ -22,7 +22,7 @@
     <% @posts.each do |p| %>
     <div class="margin-top:30px">
      <p><%= p.title %></br>
-        <img src = "<%= image_path p.title.to_s + ".jpg" %>" height="150" width="150"><br>
+        <img src = "<%= image_path p.title.to_s + ".jpg" %>" height="200" width="270"><br>
         대표메뉴 : <%= p.content%><br>
         간단설명 : <%= p.explainshort %><br>
         등록시간 : <%= p.created_at %>
