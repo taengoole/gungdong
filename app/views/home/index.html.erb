@@ -29,9 +29,13 @@
       <br>
       <div class="row center">
         <h4 class="header col s12 light">오늘은 여기 어때요?</h4>
+        <div class="fixed-action-btn">
+          <a class="btn-floating btn-large waves-effect waves-light orange" href="/home/index">
+            <i class="material-icons">refresh</i></a>
+        </div>
 			<div class="container" style="margin-top:40px">
 				<% @main_random.each do |m| %>
-					<h2 class="header center orange-text"><%= m.title %></h2>
+					<h3 class="header center orange-text"><b><%= m.title %></b></h3>
 					<p>대표메뉴 : <%= m.content %><br>
 					특    징 : <%= m.explainshort %><br></p>
 					<img src = "<%= image_path m.title.to_s + ".jpg" %>" height="200" width="270">
@@ -40,8 +44,6 @@
       </div>
 
       <div class="row center">
-        <a href="/home/index" id="download-button" class="waves-effect waves-light orange btn"><i class="material-icons">refresh</i>  다시 뽑기</a>
-        
       </div>
       <br><br>
 
